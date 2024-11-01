@@ -138,12 +138,12 @@ sensor:
       name: "SCD41 Temperature"
       id: scd41_temperature
       filters:
-        - offset: 2
+        - offset: 1.5
     humidity:
       name: "SCD41 Humidity"
       id: scd41_humidity
       filters:
-        - offset: -2
+        - offset: -0.5
     measurement_mode: low_power_periodic
     update_interval: 30s
 
