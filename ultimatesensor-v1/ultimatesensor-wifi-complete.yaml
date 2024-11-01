@@ -106,9 +106,10 @@ display:
       }
       it.print(0, 0, id(font2), "CO2");
       
-      // Display the Temperature
+      // Display the Temperature in Fahrenheit
       if (id(scd41_temperature).has_state()) {
-        it.printf(100, 0, id(font3), "%.0f°C", id(scd41_temperature).state);
+        float temperature_f = (id(scd41_temperature).state * 9.0 / 5.0) + 32.0;
+        it.printf(100, 0, id(font3), "%.0f°F", temperature_f);
       }
       
       // Display the Humidity
